@@ -17,3 +17,22 @@ let elves = [
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const elfName = data.get('elf-name');
+
+    const newElf = {
+        name: elfName || Math.ceil(Math.random() * 1000),
+        hp: Math.ceil(Math.random() * 50),
+    };
+
+    elves.push(newElf);
+
+    // console.log('Elf name:', newElf);
+    displayElves();
+});
+
+function displayElves() {
+  
+}

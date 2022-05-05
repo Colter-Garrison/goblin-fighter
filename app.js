@@ -34,5 +34,16 @@ form.addEventListener('submit', (e) => {
 });
 
 function displayElves() {
-  
+    elfListEl.textContent = ' ';
+
+    for (let elf of elves) {
+        const elfEl = renderElf(elf);
+        elfEl.addEventListener('click', () => {
+            elfClickHandler(elf);
+        });
+        elfListEl.append(elfEl);
+    }
 }
+
+displayElves();
+

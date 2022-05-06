@@ -1,7 +1,7 @@
 import { renderElf } from './elf-utils.js';
 
 const defeatedNumberEl = document.getElementById('defeated-number');
-const adventurerHp = document.getElementById('adventurer-hp');
+const adventurerHpEl = document.getElementById('adventurer-hp');
 const adventurerImgEl = document.getElementById('adventurer-img');
 const form = document.querySelector('form');
 const elfListEl = document.querySelector('.elves');
@@ -47,3 +47,36 @@ function displayElves() {
 
 displayElves();
 
+function elfClickHandler(elf) {
+    // console.log(`I am clicking on ${elf.name}`);
+    if (elf.hp === 0) return;
+    if (playerHp === 0) return;
+
+    const playerHit = Math.random();
+
+    if (playerHit < 1) {
+        elf.hp - 10;
+        displayElves;
+        alert(`You hit ${elf.name}!`);
+        if (elf.hp === 0) {
+            defeatedElvesCount++;
+            defeatedNumberEl.textContent = defeatedElvesCount;
+        }
+    } else {
+        alert('Ha! You missed!');
+    }
+
+    const elfHit = Math.random();
+
+    if (elfHit < 1) {
+        playerHp - 10;
+        adventurerHpEl.textContent = playerHp;
+        alert(`${elf.name} hit you!`);
+        if (playerHp === 0) {
+            alert('Game Over');
+            adventurerImgEl.classList.add('game-over');
+        }
+    } else {
+        alert(`${elf.name} tried to hit you and missed!`);
+    }
+}

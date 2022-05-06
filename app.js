@@ -72,7 +72,7 @@ function elfClickHandler(elf) {
     if (playerHit < 1) {
         elf.hp = elf.hp - 10;
         console.log(`elf hp is: ${elf.hp}`);
-        displayElves;
+        displayElves();
         alert(`You hit ${elf.name}!`);
         if (elf.hp === 0) {
             defeatedElvesCount++;
@@ -82,5 +82,4 @@ function elfClickHandler(elf) {
     } else {
         alert('Ha! You missed!');
     }
-
 }

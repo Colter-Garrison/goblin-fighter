@@ -94,6 +94,12 @@ footer {
     box-shadow: var(--shadow);
 }
 
+.adventurer-img {
+    position: relative;
+    top: 110px;
+    transform: scale(68%);
+}
+
 .elves {
     display: flex;
     justify-content: flex-end;
@@ -105,5 +111,7 @@ footer {
 }
 
 .game-over {
-    transform: rotate(90deg);
+    transform: scale(10%);
+    position: relative;
+    top: 200px;
 }

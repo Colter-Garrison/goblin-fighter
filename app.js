@@ -2,12 +2,12 @@ import { renderElf } from './elf-utils.js';
 
 const defeatedNumberEl = document.getElementById('defeated-number');
 const adventurerHpEl = document.getElementById('adventurer-hp');
-const adventurerImgEl = document.getElementById('adventurer-img');
+const adventurerImgEl = document.querySelector('.adventurer-img');
 const form = document.querySelector('form');
 const elfListEl = document.querySelector('.elves');
 
 let defeatedElvesCount = 0;
-let playerHp = 100;
+let playerHp = 10;
 let elves = [
     { name: 'Legolas', hp: 30 },
     { name: 'Galadriel', hp: 80 },
@@ -54,7 +54,7 @@ function elfClickHandler(elf) {
 
     const playerHit = Math.random();
 
-    if (playerHit < 1) {
+    if (playerHit < 0) {
         elf.hp = elf.hp - 10;
         console.log(`elf hp is: ${elf.hp}`);
         displayElves;

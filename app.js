@@ -55,7 +55,7 @@ function elfClickHandler(elf) {
     const playerHit = Math.random();
 
     if (playerHit < 1) {
-        elf.hp - 10;
+        elf.hp = elf.hp - 10;
         console.log(`elf hp is: ${elf.hp}`);
         displayElves;
         alert(`You hit ${elf.name}!`);
@@ -70,7 +70,8 @@ function elfClickHandler(elf) {
     const elfHit = Math.random();
 
     if (elfHit < 1) {
-        playerHp - 10;
+        playerHp = playerHp - 10;
+        console.log(`player hp is: ${playerHp}`);
         adventurerHpEl.textContent = playerHp;
         alert(`${elf.name} hit you!`);
         if (playerHp === 0) {

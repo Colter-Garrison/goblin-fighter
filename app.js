@@ -56,6 +56,7 @@ function elfClickHandler(elf) {
 
     if (playerHit < 1) {
         elf.hp - 10;
+        console.log(`elf hp is: ${elf.hp}`);
         displayElves;
         alert(`You hit ${elf.name}!`);
         if (elf.hp === 0) {

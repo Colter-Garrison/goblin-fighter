@@ -29,6 +29,10 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url(../assets/castle.png);
+    background-position: center;
+    background-size: 105%;
+    text-align: center;
 }
 
 main {
@@ -88,4 +92,18 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.elves {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dead {
+    opacity: 0.2;
+    cursor: default;
+}
+
+.game-over {
+    transform: rotate(90deg);
 }

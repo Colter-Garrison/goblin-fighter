@@ -29,17 +29,75 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url(../assets/castle.png);
+    background-position: center;
+    background-size: 105%;
+    text-align: center;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    display: grid;
+    grid-template-columns: 20% auto 20%;
 }
 
-section {
+.adventurer-img {
+    position: relative;
+    top: 300px;
+    transform: scale(70%);
+}
+
+.defeated-elves {
+    border-radius: 10px;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 2px;
+    background-color: rgb(205, 67, 255);
+    color: yellow;
+    padding: 10px;
+    margin: 10px;
+}
+
+.adventurer {
+    border-radius: 10px;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 2px;
+    background-color: greenyellow;
+    color: red;
+    padding: 10px;
+    margin: 10px;
+    grid-area: left;
+}
+
+form {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: content-box;
+    width: 200px;
+}
+
+.elves {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: brown;
+}
+
+.dead {
+    opacity: 0.2;
+    cursor: default;
+}
+
+.game-over {
+    transform: scale(10%);
+    position: relative;
+    top: 200px;
+}
+/* section {
     background-color: var(--color5);
     max-width: 80%;
     display: flex;
@@ -88,4 +146,4 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
-}
+} */

@@ -96,7 +96,7 @@ footer {
 
 .adventurer-img {
     position: relative;
-    top: 110px;
+    top: 90px; right: 100px;
     transform: scale(68%);
 }
 

@@ -54,7 +54,7 @@ function elfClickHandler(elf) {
 
     const playerHit = Math.random();
 
-    if (playerHit < 0) {
+    if (playerHit < 1) {
         elf.hp = elf.hp - 10;
         console.log(`elf hp is: ${elf.hp}`);
         displayElves;

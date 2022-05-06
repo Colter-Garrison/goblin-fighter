@@ -7,7 +7,7 @@ const form = document.querySelector('form');
 const elfListEl = document.querySelector('.elves');
 
 let defeatedElvesCount = 0;
-let playerHp = 10;
+let playerHp = 100;
 let elves = [
     { name: 'Legolas', hp: 30 },
     { name: 'Galadriel', hp: 80 },
@@ -51,22 +51,7 @@ function elfClickHandler(elf) {
     // console.log(`I am clicking on ${elf.name}`);
     if (elf.hp === 0) return;
     if (playerHp === 0) return;
-
-    const playerHit = Math.random();
-
-    if (playerHit < 1) {
-        elf.hp = elf.hp - 10;
-        console.log(`elf hp is: ${elf.hp}`);
-        displayElves;
-        alert(`You hit ${elf.name}!`);
-        if (elf.hp === 0) {
-            defeatedElvesCount++;
-            defeatedNumberEl.textContent = defeatedElvesCount;
-        }
-    } else {
-        alert('Ha! You missed!');
-    }
-
+    
     const elfHit = Math.random();
 
     if (elfHit < 1) {
@@ -81,4 +66,21 @@ function elfClickHandler(elf) {
     } else {
         alert(`${elf.name} tried to hit you and missed!`);
     }
+    
+    const playerHit = Math.random();
+
+    if (playerHit < 1) {
+        elf.hp = elf.hp - 10;
+        console.log(`elf hp is: ${elf.hp}`);
+        displayElves;
+        alert(`You hit ${elf.name}!`);
+        if (elf.hp === 0) {
+            defeatedElvesCount++;
+            defeatedNumberEl.textContent = defeatedElvesCount;
+            alert(`You defeated ${elf.name}!`);
+        }
+    } else {
+        alert('Ha! You missed!');
+    }
+
 }
